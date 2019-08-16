@@ -38,5 +38,5 @@ const sequence = new Tone.Sequence(
 );
 sequence.start();
 
-Tone.Transport.start("+1m");
+Tone.Transport.start("+4n");
 
