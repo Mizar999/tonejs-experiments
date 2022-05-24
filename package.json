@@ -4,7 +4,7 @@
     "description": "Basic experiments with Tone.js in TypeScript",
     "main": "index.js",
     "scripts": {
-        "serve": "live-server --port=8085",
+        "serve": "http-server --port=8085 -c-1",
         "example1": "cd example-1 && webpack --watch"
     },
     "repository": {
@@ -19,17 +19,12 @@
     },
     "homepage": "https://github.com/Mizar999/tonejs-experiments#readme",
     "devDependencies": {
-        "chokidar": ">=3.0.2",
-        "kind-of": ">=6.0.3",
-        "live-server": "^1.2.1",
-        "minimist": ">=1.2.3",
-        "npm-run-all": "^4.1.5",
-        "serialize-javascript": "^4.0.0",
-        "set-value": ">=4.0.1",
-        "tone": "^13.4.9",
-        "ts-loader": "^6.0.4",
-        "typescript": "^3.5.3",
-        "webpack": "^4.44.1",
-        "webpack-cli": "^3.3.6"
+        "concurrently": "^7.2.1",
+        "http-server": "^14.1.0",
+        "tone": "^14.7.77",
+        "ts-loader": "^9.3.0",
+        "typescript": "^4.6.4",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2"
     }
 }

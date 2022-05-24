@@ -9,6 +9,7 @@ Basic experiments with [Tone.js](https://github.com/Tonejs/Tone.js) in TypeScrip
     ```powershell
     npm init -y
     npm install --save-dev typescript tone webpack webpack-cli ts-loader live-server npm-run-all
+    npm install --save-dev typescript@4.6.4 ts-loader@9.3.0 tone@14.7.77 webpack@5.72.1 webpack-cli@4.9.2 http-server@14.1.0 concurrently@7.2.1
     ```
 
 - Create **Webpack** configuration `webpack.config.js`:
@@ -65,22 +66,12 @@ Basic experiments with [Tone.js](https://github.com/Tonejs/Tone.js) in TypeScrip
     npm run-script build
     ```
 
-- To run multiple npm scripts cross platform in parallel run the following command from the root directory (use the **npx** command if the packages were installed locally):
+- To run multiple npm scripts cross platform in parallel run the following command:
 
     ```powershell
     # if globally installed
-    npm-run-all --parallel example1 serve
+    concurrently npm:example1 npm:serve
 
     # if locally installed
-    npx npm-run-all --parallel example1 serve
-    ```
-
-- Or use the shorthand command **run-p** for parallel tasks:
-
-    ```powershell
-    # if globally installed
-    run-p example1 serve
-
-    # if locally installed
-    npx run-p example1 serve
+    npx concurrently npm:example1 npm:serve
     ```

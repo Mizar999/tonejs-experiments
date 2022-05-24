@@ -7,11 +7,11 @@ import * as Tone from "tone";
  *  interactive - low latency (default)
  *  fastest - lowest latency
  */
-Tone.context.latencyHint = "playback";
+const context = new Tone.Context({ latencyHint: "playback" });
+Tone.setContext(context);
 
-const crusher = new Tone.BitCrusher(3).toMaster();
+const crusher = new Tone.BitCrusher().toDestination();
 const synth = new Tone.MembraneSynth({
-    release: .8
 }).connect(crusher);
 
 // const loop = new Tone.Loop(time => {
@@ -38,5 +38,6 @@ const sequence = new Tone.Sequence(
 );
 sequence.start();
 
-Tone.Transport.start("+4n");
-
+document.querySelector('button').addEventListener('click', async () => {
+    await Tone.Transport.start("+4n");
+});
