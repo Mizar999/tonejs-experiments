@@ -55,7 +55,7 @@ Basic experiments with [Tone.js](https://github.com/Tonejs/Tone.js) in TypeScrip
 
     ```json
     "scripts": {
-        "serve": "live-server --port=8085",
+        "serve": "http-server --port=8085 -o -c-1",
         "example1": "cd example-1 && webpack --watch"
     }
     ```

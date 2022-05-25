@@ -7,7 +7,12 @@ module: {
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: /node_modules/
-    }]
+    }],
+    // exports: {
+    //     root: __dirname,
+    //     modulesDrectories: ["/node_modules/Tone"],
+    //     modules: ["/node_modules/Tone"]
+    // }
 },
 resolve: {
     extensions: ['.ts', '.tsx', '.js']
