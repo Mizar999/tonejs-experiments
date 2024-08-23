@@ -9,7 +9,7 @@ Basic experiments with [Tone.js](https://github.com/Tonejs/Tone.js) in TypeScrip
     ```powershell
     npm init -y
     npm install --save-dev typescript tone webpack webpack-cli ts-loader live-server npm-run-all
-    npm install --save-dev typescript@4.6.4 ts-loader@9.3.0 tone@14.7.77 webpack@5.72.1 webpack-cli@4.9.2 http-server@14.1.0 concurrently@7.2.1
+    npm install --save-dev typescript@4.9.4 ts-loader@9.4.2 tone@15.0.4 webpack@5.75.0 webpack-cli@5.0.1 http-server@14.1.1 concurrently@7.6.0
     ```
 
 - Create **Webpack** configuration `webpack.config.js`:
@@ -58,13 +58,6 @@ Basic experiments with [Tone.js](https://github.com/Tonejs/Tone.js) in TypeScrip
         "serve": "http-server --port=8085 -o -c-1",
         "example1": "cd example-1 && webpack --watch"
     }
-    ```
-
-- To build the application run:
-
-    ```powershell
-    npm run-script build
-    ```
 
 - To run multiple npm scripts cross platform in parallel run the following command:
 
